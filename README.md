@@ -1,17 +1,25 @@
 ## todo
 
-- [ ] project config
+- [x] project config
   - [x] eslint
   - [x] prettier
     - [x] configure: trailing commas, no-semi
   - [x] commit hook to run both
-- [ ] testing
-  - [ ] api: configure e2e testing
-    - tools: jest, supertest? || nodefetch
-- [ ] data layer
-  - [ ] break out data calls from handler
-  - [ ] save data to local file
-  - [ ] save data to cloud
+- [ ] server
+  - [ ] testing
+    - [x] api: configure e2e testing
+      - tools: jest, supertest? || nodefetch
+    - [ ] test: /api/url
+      - [ ] GET /api/url
+      - [ ] POST /api/url
+      - [ ] GET /api/url/:id
+      - [ ] DELETE /api/url/:id
+  - [ ] data layer
+    - [ ] break out data calls from handler
+    - [ ] save data to local file
+    - [ ] save data to cloud
+  - [ ] nice to have
+    - [ ] middleware logging out requests
 
 ---
 

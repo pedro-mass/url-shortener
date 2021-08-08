@@ -3,7 +3,6 @@ import type { NextApiRequest, NextApiResponse } from "next"
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const response = _.pick(req, [
-    // 'rawHeaders',
     "url",
     "method",
     "statusCode",
