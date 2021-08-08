@@ -1,3 +1,20 @@
+## todo
+
+- [ ] project config
+  - [x] eslint
+  - [x] prettier
+    - [x] configure: trailing commas, no-semi
+  - [x] commit hook to run both
+- [ ] testing
+  - [ ] api: configure e2e testing
+    - tools: jest, supertest? || nodefetch
+- [ ] data layer
+  - [ ] break out data calls from handler
+  - [ ] save data to local file
+  - [ ] save data to cloud
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

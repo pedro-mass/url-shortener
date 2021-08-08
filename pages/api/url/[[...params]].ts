@@ -1,7 +1,7 @@
-import status from 'http-status'
-import _ from 'lodash'
-import { nanoid } from 'nanoid'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import status from "http-status"
+import _ from "lodash"
+import { nanoid } from "nanoid"
+import type { NextApiRequest, NextApiResponse } from "next"
 
 export default async function handler(
   req: NextApiRequest,
@@ -19,7 +19,7 @@ export default async function handler(
   }[_.lowerCase(req.method)]
 
   if (!handler) {
-    res.setHeader('Allow', ['GET', 'POST'])
+    res.setHeader("Allow", ["GET", "POST"])
     return res
       .status(status.METHOD_NOT_ALLOWED)
       .end(`Method ${req.method} Not Allowed`)
@@ -56,7 +56,7 @@ function validate(req: NextApiRequest) {
     return { isValid: true }
   }
 
-  const hasUrl = !_.isUndefined(_.get(req.body, 'url'))
+  const hasUrl = !_.isUndefined(_.get(req.body, "url"))
   if (!hasUrl) {
     return { isValid: false, error: `Missing url from body: ${req.body}` }
   }
@@ -65,7 +65,7 @@ function validate(req: NextApiRequest) {
 }
 
 function isPost(req: NextApiRequest) {
-  return getMethod(req) === 'post'
+  return getMethod(req) === "post"
 }
 
 function getMethod(req: NextApiRequest) {
@@ -77,7 +77,7 @@ function getUrls() {
 }
 
 function getUrl(id: string) {
-  return 'https://www.google.com'
+  return "https://www.google.com"
 }
 
 function saveUrl(id: string) {
