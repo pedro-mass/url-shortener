@@ -21,6 +21,10 @@
   - [ ] nice to have
     - [ ] middleware logging out requests
 
+## refs
+
+- https://github.com/testjavascript/nodejs-integration-tests-best-practices#section-2-web-server-setup
+
 ---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
