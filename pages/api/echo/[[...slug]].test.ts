@@ -1,6 +1,6 @@
-import status from "http-status"
+import got from "got"
 
-import { createRequest } from "../utils/tests"
+import { createUrl } from "../utils/tests"
 
 describe("/api/echo", () => {
   const cases = [
@@ -14,13 +14,14 @@ describe("/api/echo", () => {
     },
   ]
 
-  it.each(cases)("should return what was sent: %j", (config) => {
-    return createRequest()
-      .post(config.url)
-      .send(config.body)
-      .expect(status.OK)
-      .then((res) => {
-        expect(res.body).toMatchObject(config)
-      })
+  it.each(cases)("should return what was sent: %j", async (config) => {
+    const res = await got
+      .post(createUrl(config.url), { json: config.body })
+      .json()
+    expect(res).toMatchObject({
+      url: config.url,
+      method: "POST",
+      body: config.body,
+    })
   })
 })
